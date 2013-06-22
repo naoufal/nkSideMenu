@@ -3,4 +3,4 @@
 *.css
 
 .sass-cache/
-stylesheets/
+css/
