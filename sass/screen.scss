@@ -4,3 +4,37 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/css3";
+@import "variables.scss"; 
+
+html {
+	// @include background-image(linear-gradient(#030a30, #3b0238));
+	background: $backgroundColor;
+	height: 100%;	
+}
+		.menu {
+			position: fixed;
+			background: black;
+			color: white;
+			height: 1000px;
+			width: 100%;
+			@include translate( 0, 0, 0);	
+			z-index: 1;
+		}	
+		.window {
+			position: fixed;			
+			background: green;
+			height: 1000px;
+			width: 100%;
+			@include translate( 0, 0, 0);	
+			z-index: 2;			
+		}		
+
+	.animate {
+		@include transition-property(all);
+		@include transition-duration(0.5s);
+		@include transition-timing-function(ease-in); 
+	}
+	footer {
+
+	}
