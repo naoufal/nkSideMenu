@@ -1,6 +1,7 @@
 .DS_Store
 *.html
 *.css
+sftp-config.json
 
 .sass-cache/
 css/
