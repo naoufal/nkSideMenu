@@ -26,7 +26,7 @@ html {
 			z-index: 1;
 
 				ul {
-					margin: 0 0 0 20px;
+					margin: 0 0 0 50px;
 					li {
 						font-size: 30px;
 						line-height: 2em;
@@ -40,11 +40,12 @@ html {
 			background: $windowBackgroundColor;
 			height: 100%;
 			width: 100%;
+			@include box-shadow(rgba(0,0,0,0.3) 0 1px 30px, rgba(0,0,0,0.7) 0 0 1px);		
 			@include translate( 0, 0, 0);	
-			z-index: 2;		
 			@include transition-property(all);
 			@include transition-duration(0.3s);
 			@include transition-timing-function(ease-in); 	
+			z-index: 2;					
 
 			header.window-header {
 				background: $headerColor;
@@ -77,7 +78,7 @@ html {
 
 	.animate {
 		@include transition-property(all);
-		@include transition-duration(0.3s);
+		@include transition-duration(0.2s);
 		@include transition-timing-function(ease-in); 
 	}
 	footer {
