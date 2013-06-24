@@ -3,5 +3,6 @@
 *.css
 sftp-config.json
 
+js/*-ck.js
 .sass-cache/
 css/
