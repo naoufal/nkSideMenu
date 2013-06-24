@@ -6,33 +6,78 @@
 @import "compass/reset";
 @import "compass/css3";
 @import "variables.scss"; 
+@import "fonts.scss"; 
+
 
 html {
-	// @include background-image(linear-gradient(#030a30, #3b0238));
-	background: $backgroundColor;
+	background: $menuBackgroundColor;
 	height: 100%;	
+	font-family: "Helvetica Neue", sans-serif;
+	font-weight: 100;
 }
 		.menu {
 			position: fixed;
-			background: black;
+			background: $menuBackgroundColor;
 			color: white;
-			height: 1000px;
+			height: 100%;
 			width: 100%;
 			@include translate( 0, 0, 0);	
+			@include scale( 0.8, 0.8);				
 			z-index: 1;
+
+				ul {
+					margin: 0 0 0 20px;
+					li {
+						font-size: 30px;
+						line-height: 2em;
+						cursor: pointer;
+					}					
+				}
+
 		}	
 		.window {
 			position: fixed;			
-			background: green;
-			height: 1000px;
+			background: $windowBackgroundColor;
+			height: 100%;
 			width: 100%;
 			@include translate( 0, 0, 0);	
-			z-index: 2;			
+			z-index: 2;		
+			@include transition-property(all);
+			@include transition-duration(0.3s);
+			@include transition-timing-function(ease-in); 	
+
+			header.window-header {
+				background: $headerColor;
+				height: 40px;
+				width: 100%;		
+				text-align: center;	
+				text-transform: capitalize;																								
+
+				.button {
+					background: $buttonColor;
+					width: 60px;
+					height: 40px;
+					color: white;
+					text-align: center;
+					line-height: 40px;			
+					cursor: pointer;	
+				}
+				.button.right {
+					float: right;
+				}
+				.button.left {
+					float: left;
+				}	
+				span.title {
+					color: white;
+					line-height: 40px;
+				}			
+			}			
 		}		
 
 	.animate {
 		@include transition-property(all);
-		@include transition-duration(0.5s);
+		@include transition-duration(0.3s);
 		@include transition-timing-function(ease-in); 
 	}
 	footer {
