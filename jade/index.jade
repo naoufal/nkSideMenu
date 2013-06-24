@@ -2,29 +2,33 @@ extend layout
 
 block styles
 	//- link(rel='icon', type='image/png', href='images/favicon.png')
-	link(rel='stylesheet', href='css/print.css', type='text/css')	
-	link(rel='stylesheet', href='css/ie.css', type='text/css')		
+	//- link(rel='stylesheet', href='css/print.css', type='text/css')	
+	//- link(rel='stylesheet', href='css/ie.css', type='text/css')		
 	link(rel='stylesheet', href='css/screen.css', type='text/css')			
 
 //- CONTENT
 
 block header
-	
 		
 block body
 	div.menu
 		ul
-			li Home
-			li Explore
-			li Activity
-			li Profile
-			li Log out			
+			li.home Home
+			li.projects Projects
+			li.portfolio Portfolio
+			li.photos Photos	
+			li.contact Contact
 
-	div.window
+	div#home.window
+		header.window-header
+			.button.left Menu
+			span.title Home
+			.button.right Menu
+
 
 block footer
 	h2 Footer
 
 block scripts
 	script(src='js/jquery-2.0.2.min.js')
-	script(src='js/animate.js')		
+	script(src='js/animate.js')
