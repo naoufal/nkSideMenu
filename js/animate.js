@@ -13,7 +13,7 @@ $('.side-menu-button').click(function(){
 });
 
 $('.menu li').click(function(){
-	hideSideMenu();
+	hideSideMenu(this);
 });
 
 function showSideMenu(){
@@ -28,12 +28,12 @@ function showSideMenu(){
 	}
 }
 
-function hideSideMenu(){
+function hideSideMenu(title){
 	if(Modernizr.csstransitions){
 		$('.window').css('transform', 'translate3d(0px, 0, 0) scale(1,1) ');
 		$('.menu').css('transform', 'scale(0.6,0.6) ');	
 		$('.menu').css('opacity', '0');	
-		$('.title').html($(this).attr('class'));
+		$('.title').html($(title).attr('class'));
 	} else {
 		alert('css transitions not supported');
 	}	
