@@ -19,10 +19,11 @@ html {
 			position: fixed;
 			background: $menuBackgroundColor;
 			color: white;
+			opacity: 0;
 			height: 100%;
 			width: 100%;
 			@include translate( 0, 0, 0);	
-			@include scale( 0.8, 0.8);				
+			@include scale( 0.6, 0.6);				
 			z-index: 1;
 
 				ul {
@@ -42,25 +43,25 @@ html {
 			width: 100%;
 			@include box-shadow(rgba(0,0,0,0.3) 0 1px 30px, rgba(0,0,0,0.7) 0 0 1px);		
 			@include translate( 0, 0, 0);	
-			@include transition-property(all);
-			@include transition-duration(0.3s);
-			@include transition-timing-function(ease-in); 	
 			z-index: 2;					
 
 			header.window-header {
 				background: $headerColor;
 				height: 40px;
+				@include translate( 0, 0, 0);	
+				line-height: 40px;
+				color: white;
 				width: 100%;		
 				text-align: center;	
 				text-transform: capitalize;																								
 
 				.button {
 					background: $buttonColor;
-					width: 60px;
 					height: 40px;
 					color: white;
 					text-align: center;
-					line-height: 40px;			
+					line-height: 40px;	
+					padding: 0 10px;		
 					cursor: pointer;	
 				}
 				.button.right {
@@ -81,6 +82,7 @@ html {
 		@include transition-duration(0.2s);
 		@include transition-timing-function(ease-in); 
 	}
+
 	footer {
 
 	}
