@@ -8,6 +8,10 @@ $(document).ready(function(){
 	});	
 });
 
+$(window).resize(function(){
+	deviceWidth = $(window).width();
+});
+
 $('.side-menu-button').click(function(){
 	showSideMenu();
 });
@@ -24,7 +28,8 @@ function showSideMenu(){
 		$('.menu').css('transform', 'scale(1,1) ');
 		$('.menu').css('opacity', '1');
 	} else {
-		alert('css transitions not supported');
+		$('.menu').animate({'left': '0px'}, 200);		
+		$('.window').animate({'left': (deviceWidth - ($('.side-menu-button').width() + 20)) + 'px'}, 200);
 	}
 }
 
@@ -35,6 +40,8 @@ function hideSideMenu(title){
 		$('.menu').css('opacity', '0');	
 		$('.title').html($(title).attr('class'));
 	} else {
-		alert('css transitions not supported');
+		$('.window').animate({'left': '0px'}, 200);
+		$('.menu').animate({'left': '60%'}, 200);				
+		$('.title').html($(title).attr('class'));		
 	}	
 }
