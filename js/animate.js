@@ -33,15 +33,21 @@ function showSideMenu(){
 	}
 }
 
-function hideSideMenu(title){
+function hideSideMenu(menuTitle){
 	if(Modernizr.csstransitions){
 		$('.window').css('transform', 'translate3d(0px, 0, 0) scale(1,1) ');
 		$('.menu').css('transform', 'scale(0.6,0.6) ');	
 		$('.menu').css('opacity', '0');	
-		$('.title').html($(title).attr('class'));
 	} else {
 		$('.window').animate({'left': '0px'}, 200);
 		$('.menu').animate({'left': '60%'}, 200);				
-		$('.title').html($(title).attr('class'));		
+		$('.menuTitle').html($(menuTitle).attr('class'));		
 	}	
+	feedContent(menuTitle);
+}
+
+function feedContent(menuTitle){
+	$('.window-content').load('views/' + $(menuTitle).attr('class') + '.html');
+	$('.title').html($(menuTitle).attr('class'));	
+	setContentHeight();	
 }
