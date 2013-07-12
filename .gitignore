@@ -1,8 +1,6 @@
 .DS_Store
-*.html
-*.css
 sftp-config.json
+codekit-config.json
 
 js/*.min.js
 .sass-cache/
-css/
