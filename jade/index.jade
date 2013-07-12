@@ -1,10 +1,8 @@
 extend layout
 
 block styles
-	//- link(rel='icon', type='image/png', href='images/favicon.png')
-	//- link(rel='stylesheet', href='css/print.css', type='text/css')	
-	//- link(rel='stylesheet', href='css/ie.css', type='text/css')		
-	link(rel='stylesheet', href='css/screen.css', type='text/css')			
+	//- link(rel='icon', type='image/png', href='images/favicon.png')	
+	link(rel='stylesheet', href='css/base.css', type='text/css')			
 
 block !js
 	script(src='js/lib/modernizr.custom.06277.js')
@@ -26,8 +24,9 @@ block body
 		header.window-header
 			.button.left.side-menu-button Menu
 			.title Home
-
-
+		.window-content 
+			section.home Hit the Menu button to see nkSideMenu in action!
+			
 block footer
 	h2 Footer
 
