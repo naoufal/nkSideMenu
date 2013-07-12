@@ -14,6 +14,7 @@ html {
 	height: 100%;	
 	font-family: "Helvetica Neue", sans-serif;
 	font-weight: 200;
+	overflow: hidden;									
 }
 
 .csstransitions {
@@ -41,7 +42,7 @@ html {
 	}	
 
 	.window {
-		position: fixed;			
+		position: fixed;	
 		background: $windowBackgroundColor;
 		height: 100%;
 		width: 100%;
@@ -115,7 +116,7 @@ html {
 	}	
 
 	.window {
-		position: fixed;			
+		position: fixed;	
 		background: $windowBackgroundColor;
 		height: 100%;
 		width: 100%;
@@ -162,11 +163,21 @@ html {
 }
 
 
-/* WINDOW CONTENT
+/* ABOVE AND BEYOND
 ***************************************/
 
-.window-content {
-	overflow: scroll;
-	-webkit-overflow-scrolling: touch;		
-	padding: 10px;	
-}	
+.overflowscrolling {
+	.window-content {
+		overflow: scroll;
+		-webkit-overflow-scrolling: touch;	
+		height:100%;
+	}	
+}
+
+.no-overflowscrolling {
+	.window-content {
+		overflow: scroll;
+		height:100%;
+	}	
+}		
+
