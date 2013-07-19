@@ -1,22 +1,23 @@
-$(document).ready(function(){
-	verticalAlign('.menu-list');
-	setContentHeight();	
-});
-
 $(window).resize(function(){
-	verticalAlign('.menu-list');
-	setContentHeight();		
+	deviceDimensions;	
+	verticalAlignMenu;
+	setContentHeight;
 });
 
-function verticalAlign(element){
-	deviceHeight = $(window).height();
-	elementHeight = $(''+ element +'').height();
-	marginTop = (deviceHeight - elementHeight) / 2;
-	$(''+ element +'').css('margin-top', marginTop);
-}
+var verticalAlignMenu =	(function(element){
+							deviceHeight = $(window).height();
+							elementHeight = $('.menu-list').height();
+							marginTop = (deviceHeight - elementHeight) / 2;
+							$('.menu-list').css('margin-top', marginTop);
+						}())
 
-function setContentHeight(){
-	deviceHeight = $(window).height();
-	headerHeight = 	$('.window-header').height();
-	$('.window-content').height(deviceHeight - headerHeight);
-}
+var setContentHeight = 	(function(){
+							deviceHeight = $(window).height();
+							headerHeight = 	$('.window-header').height();
+							$('.window-content').height(deviceHeight - headerHeight);
+						}())
+
+var deviceDimensions = 	(function(){
+							deviceHeight = $(window).height();
+							deviceWidth = $(window).width();
+						}())
