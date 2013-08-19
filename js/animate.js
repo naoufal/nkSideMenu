@@ -26,7 +26,7 @@ $(function(){
 		} else {
 			$('.window').animate({'left': '0px'}, 200);
 			$('.menu').animate({'left': '60%'}, 200);				
-			$('.menuTitle').html($(this).attr('class'));		
+			$('.menuTitle').html($(this).html());		
 		}	
 		feedContent(this);
 	});	
@@ -35,6 +35,6 @@ $(function(){
 // Feeds loads selected menu into window content.  This can be changed to do your own custom magic.
 function feedContent(menuTitle){
 	$('.window-content').load('views/' + $(menuTitle).attr('class') + '.html');
-	$('.title').html($(menuTitle).attr('class'));	
+	$('.title').html($(menuTitle).html());	
 	deviceDimensions;
 }
