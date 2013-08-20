@@ -112,6 +112,7 @@ html {
   background: #f8f8f8;
   height: 100%;
   width: 100%;
+  overflow: hidden;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 30px, rgba(0, 0, 0, 0.7) 0 0 1px;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 30px, rgba(0, 0, 0, 0.7) 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 1px 30px, rgba(0, 0, 0, 0.7) 0 0 1px;
@@ -122,7 +123,7 @@ html {
   transform: perspective(0) translate(0, 0);
   z-index: 2;
 }
-/* line 57, ../sass/base.scss */
+/* line 58, ../sass/base.scss */
 .csstransitions .window header.window-header {
   background: #2c3e50;
   height: 60px;
@@ -137,7 +138,7 @@ html {
   width: 100%;
   text-align: center;
 }
-/* line 67, ../sass/base.scss */
+/* line 68, ../sass/base.scss */
 .csstransitions .window header.window-header .button {
   height: 60px;
   width: 80px;
@@ -147,21 +148,21 @@ html {
   padding: 0 10px;
   cursor: pointer;
 }
-/* line 77, ../sass/base.scss */
+/* line 78, ../sass/base.scss */
 .csstransitions .window header.window-header .button.right {
   float: right;
 }
-/* line 81, ../sass/base.scss */
+/* line 82, ../sass/base.scss */
 .csstransitions .window header.window-header .button.left {
   float: left;
 }
-/* line 85, ../sass/base.scss */
+/* line 86, ../sass/base.scss */
 .csstransitions .window header.window-header .title {
   color: white;
   line-height: 60px;
   padding: 0 80px 0 0;
 }
-/* line 92, ../sass/base.scss */
+/* line 93, ../sass/base.scss */
 .csstransitions .window footer {
   position: absolute;
   bottom: 0;
@@ -173,12 +174,12 @@ html {
   font-size: 14px;
   line-height: 60px;
 }
-/* line 102, ../sass/base.scss */
+/* line 103, ../sass/base.scss */
 .csstransitions .window footer a {
   color: #3498D8;
   text-decoration: none;
 }
-/* line 109, ../sass/base.scss */
+/* line 110, ../sass/base.scss */
 .csstransitions .animate {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -194,7 +195,7 @@ html {
   transition-timing-function: ease-in;
 }
 
-/* line 118, ../sass/base.scss */
+/* line 119, ../sass/base.scss */
 .no-csstransitions .menu {
   position: fixed;
   background: #7f8c8d;
@@ -205,22 +206,23 @@ html {
   left: 60%;
   z-index: 1;
 }
-/* line 128, ../sass/base.scss */
+/* line 129, ../sass/base.scss */
 .no-csstransitions .menu ul {
   margin: 0 0 0 50px;
 }
-/* line 131, ../sass/base.scss */
+/* line 132, ../sass/base.scss */
 .no-csstransitions .menu ul li {
   font-size: 30px;
   line-height: 2em;
   cursor: pointer;
 }
-/* line 139, ../sass/base.scss */
+/* line 140, ../sass/base.scss */
 .no-csstransitions .window {
   position: fixed;
   background: #f8f8f8;
   height: 100%;
   width: 100%;
+  overflow: hidden;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 30px, rgba(0, 0, 0, 0.7) 0 0 1px;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 30px, rgba(0, 0, 0, 0.7) 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 1px 30px, rgba(0, 0, 0, 0.7) 0 0 1px;
@@ -228,42 +230,41 @@ html {
   left: 0;
   z-index: 2;
 }
-/* line 149, ../sass/base.scss */
+/* line 151, ../sass/base.scss */
 .no-csstransitions .window header.window-header {
   background: #2c3e50;
   height: 60px;
   top: 0;
   left: 0;
-  line-height: 40px;
+  line-height: 60px;
   color: white;
   width: 100%;
   text-align: center;
   text-transform: capitalize;
 }
-/* line 160, ../sass/base.scss */
+/* line 162, ../sass/base.scss */
 .no-csstransitions .window header.window-header .button {
-  background: #3b5671;
-  height: 40px;
+  height: 60px;
   color: white;
   text-align: center;
-  line-height: 40px;
+  line-height: 60px;
   padding: 0 10px;
   cursor: pointer;
 }
-/* line 170, ../sass/base.scss */
+/* line 171, ../sass/base.scss */
 .no-csstransitions .window header.window-header .button.right {
   float: right;
 }
-/* line 174, ../sass/base.scss */
+/* line 175, ../sass/base.scss */
 .no-csstransitions .window header.window-header .button.left {
   float: left;
 }
-/* line 178, ../sass/base.scss */
+/* line 179, ../sass/base.scss */
 .no-csstransitions .window header.window-header span.title {
   color: white;
-  line-height: 40px;
+  line-height: 60px;
 }
-/* line 183, ../sass/base.scss */
+/* line 184, ../sass/base.scss */
 .no-csstransitions .window header.window-header footer {
   position: absolute;
   bottom: 0;
@@ -275,7 +276,7 @@ html {
   font-size: 14px;
   line-height: 60px;
 }
-/* line 193, ../sass/base.scss */
+/* line 194, ../sass/base.scss */
 .no-csstransitions .window header.window-header footer a {
   color: #3498D8;
   text-decoration: none;
@@ -283,7 +284,7 @@ html {
 
 /* ABOVE AND BEYOND
 ***************************************/
-/* line 207, ../sass/base.scss */
+/* line 208, ../sass/base.scss */
 .overflowscrolling .window-content {
   padding: 10px;
   overflow: scroll;
@@ -292,12 +293,12 @@ html {
   text-align: justify;
   line-height: 1.5em;
 }
-/* line 215, ../sass/base.scss */
+/* line 216, ../sass/base.scss */
 .overflowscrolling .window-content p {
   padding-bottom: 10px;
 }
 
-/* line 222, ../sass/base.scss */
+/* line 223, ../sass/base.scss */
 .no-overflowscrolling .window-content {
   padding: 10px;
   overflow: scroll;
@@ -305,7 +306,7 @@ html {
   text-align: justify;
   line-height: 1.5em;
 }
-/* line 229, ../sass/base.scss */
+/* line 230, ../sass/base.scss */
 .no-overflowscrolling .window-content p {
   padding-bottom: 10px;
 }

@@ -50,6 +50,7 @@ html {
 		background: $windowBackgroundColor;
 		height: 100%;
 		width: 100%;
+		overflow: hidden;
 		@include box-shadow(rgba(0,0,0,0.3) 0 1px 30px, rgba(0,0,0,0.7) 0 0 1px);		
 		@include translate( 0, 0, 0);	
 		z-index: 2;					
@@ -141,6 +142,7 @@ html {
 		background: $windowBackgroundColor;
 		height: 100%;
 		width: 100%;
+		overflow: hidden;		
 		@include box-shadow(rgba(0,0,0,0.3) 0 1px 30px, rgba(0,0,0,0.7) 0 0 1px);		
 		top: 0;
 		left: 0;	
@@ -151,18 +153,17 @@ html {
 			height: 60px;
 			top: 0;
 			left: 0;	
-			line-height: 40px;
+			line-height: 60px;
 			color: white;
 			width: 100%;		
 			text-align: center;	
 			text-transform: capitalize;																								
 
 			.button {
-				background: $buttonColor;
-				height: 40px;
+				height: 60px;
 				color: white;
 				text-align: center;
-				line-height: 40px;	
+				line-height: 60px;	
 				padding: 0 10px;		
 				cursor: pointer;	
 			}
@@ -177,7 +178,7 @@ html {
 
 			span.title {
 				color: white;
-				line-height: 40px;
+				line-height: 60px;
 			}	
 			
 			footer {
