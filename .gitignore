@@ -2,6 +2,4 @@
 config.rb
 sftp-config.json
 codekit-config.json
-
-js/*.min.js
 .sass-cache/
